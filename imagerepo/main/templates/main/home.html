@@ -1,0 +1,22 @@
+{% extends "main/base.html" %}
+{% block title %}Image Gallery{% endblock %}
+
+{% block content %}
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light text-white"><strong>Image Gallery</strong></h1>
+        <p class="text-light">Created by: Brandon Daliri</p>
+        <p class="lead text-light">
+          This website was created as part of the Shopify Backend Developer Internship Challenge using Python and Django.<br><br>
+          To get started, create an account using the button below.<br>
+          Thank you for taking the time to look around!
+        </p>
+        <p>
+          <a href="/register" class="btn btn-primary my-2">Sign up</a>
+          <a href="/login" class="btn btn-secondary my-2">Login</a>
+        </p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

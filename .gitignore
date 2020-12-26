@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Media files for Django web-app
+imagerepo/media/*
+
 # C extensions
 *.so
 

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+body {
+    background-color: #4E4E4E !important;
+}
+
+.settings-div{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    display: none;
+}
+
+.image {
+    max-height: 255px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.caption {
+    line-height: 1;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    padding-left: 2%;
+}
+
+.img-title {
+    text-align: center;
+}
+
+.img-title-link {
+    color: white;
+    text-decoration: none;
+}
+
+.img-title-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.edit-image {
+    max-height: 400px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.image:hover ~ .settings-div, .settings-div:hover {
+    display: inline-block;
+}

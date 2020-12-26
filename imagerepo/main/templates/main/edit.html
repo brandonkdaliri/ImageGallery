@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+{% block title %}{{image.image_title}}{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<br>
+<div class="container" style="max-width: 800px;">
+    <img class="card-img-top edit-image rounded" src="{{image.image.url}}"></img>
+</div>
+<br>
+<div class="container text-light" style="max-width: 600px; position: relative;">
+    <form method="POST" style="display: inline;" autocomplete="off" class="form-group">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <br>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="/" class="btn btn-secondary">Cancel</a>
+    </form>
+    <form style="display: inline;" action="/delete/{{image.id}}/" method="POST" onsubmit="return confirm('Are you sure you want to delete {{image.image_title}}?');">
+        {% csrf_token %}
+        <button type="submit" style="right: 2%; position: absolute;" class="btn btn-danger" id="delete-btn">Delete</button>
+    </form>
+</div>
+{% endblock %}
